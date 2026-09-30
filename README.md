@@ -11,8 +11,8 @@ security, and modern development workflows.
   <a href="https://github.com/BrahimNaji">
     <img src="https://img.shields.io/github/followers/BrahimNaji?label=Followers&style=flat" />
   </a>
-  <a href="https://github.com/BrahimNaji">
-    <img src="https://img.shields.io/github/stars/BrahimNaji?label=Stars&style=flat" />
+  <a href="https://github.com/BrahimNJ">
+    <img src="https://img.shields.io/github/stars/BrahimNJ?label=Stars&style=flat" />
   </a>
 </p>
 
