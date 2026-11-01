@@ -12,7 +12,7 @@
 </p>
 
 <p>
-  <a href="https://invoice-flow-brahim21.vercel.app"><img src="https://img.shields.io/badge/Live-InvoiceFlow-16A34A?style=for-the-badge&logo=vercel&logoColor=white" alt="InvoiceFlow live demo" /></a>
+  <a href="https://invoice-flow-seven-omega.vercel.app"><img src="https://img.shields.io/badge/Live-InvoiceFlow-16A34A?style=for-the-badge&logo=vercel&logoColor=white" alt="InvoiceFlow live demo" /></a>
   <a href="https://devpulse-865877702597.europe-west1.run.app"><img src="https://img.shields.io/badge/Live-DevPulse-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="DevPulse live demo" /></a>
 </p>
 
@@ -32,45 +32,47 @@ I build fullstack applications end to end, and I care about the parts that make 
 Architecture  →  Backend  →  Frontend  →  Security  →  CI/CD  →  Production
 ```
 
-- 🏭 **Nexen Tech**: designed a multi-vendor abstraction API; 4 vendors with different protocols, plugged in without touching the shared core
-- 🧾 **InvoiceFlow**: e-invoicing app for French SMEs, live in production, **172 automated tests**
-- 📊 **DevPulse**: GitHub repository analytics, live on **Google Cloud Run**, infrastructure as code with **Terraform**, **13 architecture decision records**
-- 🔐 Comfortable with **Keycloak, OAuth2/OIDC, JWT refresh-token rotation, Vault**
-- 🤖 I use **Claude Code** as a coding agent, and I only ship code I can explain
+- **Nexen Tech**: designed a multi-vendor abstraction API; 4 vendors with different protocols, plugged in without touching the shared core
+- **InvoiceFlow**: e-invoicing app for French SMEs, live in production, **500+ automated tests** and **~97 % coverage**
+- **DevPulse**: GitHub repository analytics, live on **Google Cloud Run**, infrastructure as code with **Terraform**
+- Comfortable with **Keycloak, OAuth2/OIDC, JWT refresh-token rotation, Vault**
+- I use **Claude Code** as a coding agent, and I only ship code I can explain
 
 ---
 
-## 🚀 Featured projects
+## Featured projects
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🧾 [InvoiceFlow](https://github.com/BrahimNJ/InvoiceFlow)
+### [InvoiceFlow](https://github.com/BrahimNJ/InvoiceFlow)
 
-Invoicing app built for the French e-invoicing reform (2026-2027).
+Invoicing for the French e-invoicing reform (2026-2027).
 
-- ✅ Live: accounts, customers, products & services with French VAT rates
-- 🔐 JWT (15 min) + rotating refresh tokens with reuse detection (RFC 9700)
-- 🧪 **172 tests** · every green merge is deployed **and verified in production**
-- 🗺️ Next: invoices & payments → PDF / Factur-X → AI assistant
+- **Live**: accounts, customers, products with French VAT rates, and **invoices**: drafts, VAT per rate, gap-free numbering, readiness checks, issue, cancel, overdue tracking
+- **Security**: 15-min JWT, rotating refresh tokens with reuse detection (RFC 9700), per-IP rate limiting, threat model
+- **Quality**: 252 backend + 233 frontend + 21 end-to-end tests · 97.5 % / 96.5 % line coverage · 0 WCAG 2.1 AA violations · Lighthouse accessibility 100
+- **Architecture**: modular monolith with boundaries enforced by Spring Modulith, OpenAPI reference
+- **Delivery**: every green merge deployed **and verified in production**
+- **Next**: payments → PDF / Factur-X → AI assistant
 
-`Java 21` `Spring Boot 4` `Angular 21` `PostgreSQL 17` `Flyway` `Docker` `GitHub Actions`
+`Java 21` `Spring Boot 4` `Angular 21` `PostgreSQL 17` `Playwright` `Docker` `GitHub Actions`
 
-[**▶ Live demo**](https://invoice-flow-brahim21.vercel.app) · [Source](https://github.com/BrahimNJ/InvoiceFlow)
+[**▶ Live demo**](https://invoice-flow-seven-omega.vercel.app) · [Source](https://github.com/BrahimNJ/InvoiceFlow)
 
 </td>
 <td width="50%" valign="top">
 
-### 📊 [DevPulse](https://github.com/BrahimNJ/DevPulse)
+### [DevPulse](https://github.com/BrahimNJ/DevPulse)
 
 Type any public GitHub repository and see how healthy it is and how fast it ships.
 
-- 🌿 **Branches**: stale work, protections (rules _and_ rulesets), divergence from the default branch
-- 🚚 **Delivery**: DORA-style metrics over 90 days: lead time, review time, throughput, releases, revert rate
-- 📈 **Activity**: a year of commits, contributor flow, concentration and project rhythm
-- 🧱 React app, HTTP API **and** CLI on one I/O-free domain · **188 tests** · FR / EN
-- ☁️ Cloud Run + Terraform · per-visitor quota · automated releases (v0.11)
+- **Branches**: stale work, protections (rules _and_ rulesets), divergence from the default branch
+- **Delivery**: DORA-style metrics over 90 days: lead time, review time, throughput, releases, revert rate
+- **Activity**: a year of commits, contributor flow, concentration and project rhythm
+- **Architecture**: React app, HTTP API **and** CLI on one I/O-free domain · 188 tests · 13 ADRs
+- **Delivery**: Cloud Run + Terraform, per-visitor quota, automated releases (v0.11), French and English
 
 `TypeScript` `Node.js 24` `React 19` `Vite` `GraphQL` `GCP` `Terraform`
 
@@ -82,7 +84,7 @@ Type any public GitHub repository and see how healthy it is and how fast it ship
 
 ---
 
-## 🛠️ Tech stack
+## Tech stack
 
 **Backend**
 <br/>
@@ -108,9 +110,15 @@ Type any public GitHub repository and see how healthy it is and how fast it ship
 <img src="https://img.shields.io/badge/OAuth2%20%2F%20OIDC-2563EB?style=for-the-badge&logo=openid&logoColor=white" alt="OAuth2 / OIDC" />
 <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT" />
 
+**Testing**
+<br/>
+<img src="https://img.shields.io/badge/JUnit%205-25A162?style=for-the-badge&logo=junit5&logoColor=white" alt="JUnit 5" />
+<img src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest" />
+<img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright" />
+
 ---
 
-## 🧠 How I build software
+## How I build software
 
 AI speeds up the typing. Engineering decides what gets shipped.
 
@@ -129,18 +137,18 @@ flowchart LR
 
 - **Decisions on record**: every technical choice is an ADR with the alternatives rejected and why
 - **Small steps**: one issue per change, atomic Conventional Commits, one pull request
+- **Independent review**: a read-only reviewer agent checks every non-trivial diff before a human reviews the pull request
 - **Guardrails**: the agent never merges, never pushes to `main`, never touches secrets or cloud resources
-- **Proof over promises**: tests, CI gates (lint, types, secret scanning, dependency audit) and post-deploy checks decide, not the model
+- **Proof over promises**: coverage floors, accessibility and performance budgets fail the build when they regress
 
 ---
 
-## 🔭 Right now
+## Right now
 
-- 🧾 Shipping **invoices & payments** in InvoiceFlow, then **Factur-X** export
-- 🧩 Next: an **AI assistant**: a sentence in, a draft invoice out (structured output, tests, human confirmation)
-- 📊 Growing **DevPulse** after branches, delivery and activity: next analyses are specified as issues before they are built
-- ☸️ Running InvoiceFlow on **Kubernetes** with Helm
-- 💼 Looking for a **software engineer / fullstack** role in France
+- Finishing the **showcase** work on InvoiceFlow, then **payments** and **Factur-X** export
+- Next: an **AI assistant**: a sentence in, a draft invoice out (structured output, tests, human confirmation)
+- Growing **DevPulse** after branches, delivery and activity: each new analysis is specified as an issue before it is built
+- Looking for a **software engineer / fullstack** role in France
 
 ---
 
